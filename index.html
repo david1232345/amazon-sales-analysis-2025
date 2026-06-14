@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syntra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Fondo de partículas -->
+    <div id="particles-js"></div>
+
+    <header class="hero">
+        <nav>
+            <h1>Syntra</h1>
+            <span>Educación Financiera e Inversiones</span>
+        </nav>
+
+        <section>
+            <h2>Analiza acciones con datos reales e inteligencia artificial</h2>
+
+            <p>
+                Aprende a invertir, visualiza tendencias del mercado
+                y recibe explicaciones sencillas impulsadas por IA.
+            </p>
+
+            <p class="warning">
+                Información educativa. No constituye asesoría financiera personalizada.
+            </p>
+        </section>
+    </header>
+
+    <main class="container">
+
+        <section class="card search-card">
+            <h2>Buscar Acción</h2>
+
+            <div class="row">
+                <input id="symbolInput"
+                    value="AAPL"
+                    placeholder="Ejemplo: AAPL, TSLA, NVDA">
+
+                <button id="searchBtn">
+                    Buscar
+                </button>
+            </div>
+
+            <p id="statusText" class="muted">
+                Listo para buscar.
+            </p>
+        </section>
+
+        <section class="grid">
+
+            <article class="card">
+
+                <h2 id="companyName">
+                    Acción
+                </h2>
+
+                <div class="stats">
+
+                    <div>
+                        <span>Precio</span>
+                        <strong id="price">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Cambio</span>
+                        <strong id="change">--</strong>
+                    </div>
+
+                    <div>
+                        <span>% Día</span>
+                        <strong id="percentChange">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Prev. cierre</span>
+                        <strong id="previousClose">--</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <h2>Resumen Rápido</h2>
+
+                <table>
+                    <tbody id="stockTable">
+
+                        <tr>
+                            <td>Símbolo</td>
+                            <td>--</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bolsa</td>
+                            <td>--</td>
+                        </tr>
+
+                        <tr>
+                            <td>Máximo</td>
+                            <td>--</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mínimo</td>
+                            <td>--</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </article>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Gráfica Histórica</h2>
+
+            <canvas id="stockChart" height="120"></canvas>
+
+        </section>
+
+        <section class="card chat-card">
+
+            <h2>Asistente IA Syntra</h2>
+
+            <div id="chatBox" class="chat-box">
+
+                <div class="bot">
+                    Hola. Soy Syntra AI.
+                    Puedo ayudarte a entender acciones,
+                    tendencias del mercado y conceptos financieros.
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <input id="chatInput"
+                    placeholder="Pregunta algo sobre la acción seleccionada...">
+
+                <button id="chatBtn">
+                    Enviar
+                </button>
+
+            </div>
+
+            <button id="analyzeBtn" class="secondary">
+                Analizar acción actual con IA
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Syntra · Plataforma educativa de finanzas e inversiones.
+        </p>
+    </footer>
+
+    <!-- Partículas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Tu JavaScript -->
+    <script src="./assets/app.js"></script>
+
+</body>
+
+</html>
+
+
